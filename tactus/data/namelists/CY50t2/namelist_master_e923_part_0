@@ -60,7 +60,7 @@
 /
 
 &NAMARG
-    CNMEXP = 'DEOD',
+    CNMEXP = '${cfg:general.cnmexp}',
     LECMWF = .FALSE.,
     LELAM = .TRUE.,
     NCONF = 923,
@@ -90,7 +90,7 @@
 
 &NAMCLA
     FENVN = 0.0,
-    LIPGD = .FALSE.,
+    LIPGD = .TRUE.,
     LKEYF = .TRUE.,
     LNEWORO = .TRUE.,
     LNEWORO2 = .FALSE.,
@@ -158,13 +158,13 @@
 /
 
 &NAMDIM
-    NDGLG = 80,
-    NDGUXG = 69,
-    NDLON = 60,
-    NDLUXG = 49,
+    NDGLG = '${cfg:domain.ndglg}',
+    NDGUXG = '${cfg:domain.njmax}',
+    NDLON = '${cfg:domain.ndguxg}',
+    NDLUXG = '${cfg:domain.nimax}',
     NFLEVG = 1,
-    NMSMAX = 19,
-    NSMAX = 26,
+    NMSMAX = '${cfg:domain.nmsmax_oro}',
+    NSMAX = '${cfg:domain.nsmax_oro}',
 /
 
 &NAMDIMO
@@ -284,7 +284,7 @@
 /
 
 &NAMGRIB
-    NCYCLE = 48,
+    NCYCLE = 50,
 /
 
 &NAMGWD
@@ -655,8 +655,8 @@
 /
 
 &NEMDIM
-    NBZONG = 8,
-    NBZONL = 8,
+    NBZONG = '${cfg:domain.nbzong}',
+    NBZONL = '${cfg:domain.nbzonl}',
 /
 
 &NEMDYN
@@ -672,12 +672,12 @@
 /
 
 &NEMGEO
-    EDELX = 2500,
-    EDELY = 2500,
-    ELAT0 = 51.967,
-    ELATC = 51.967,
-    ELON0 = 4.9,
-    ELONC = 4.9,
+    EDELX = '${cfg:domain.xdx}',
+    EDELY = '${cfg:domain.xdy}',
+    ELAT0 = '${cfg:domain.xlat0}',
+    ELATC = '${cfg:domain.xlatcen}',
+    ELON0 = '${cfg:domain.xlon0}',
+    ELONC = '${cfg:domain.xloncen}',
 /
 
 &NEMJK
